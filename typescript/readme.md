@@ -43,3 +43,38 @@ function showTicket(user, ticket) {
 showTicket('João Inácio', 123);
 ```
 
+
+## Matrizes
+
+Existem duas maneiras de tipar arrays no TypeScript, confira os exemplos:
+
+```tsx
+let numbers: number[];
+numbers = [1,2,3,4,5,6];
+
+let users: Array<string>;
+users = ['Rodrigo', 'João'];
+```
+
+
+## Funções
+
+Uma função pode ter ou não um retorno, quando ela não tem um retorno ela é do tipo `void`
+
+Dessa maneira, tipamos dessa forma no TypeScript:
+
+```tsx
+function showMessages(message: string):void {
+    console.log(message)
+}
+```
+
+Já quando a função tem um retorno, a tipagem é inferida automaticamente na função.
+
+```tsx
+function showMessages(message: string) {
+   return message;
+}
+
+console.log(showMessages("Oi, João"))
+```
