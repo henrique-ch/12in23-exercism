@@ -106,6 +106,31 @@ Em vez disso, precisamos de uma forma de capturar o tipo do argumento de forma q
 function identity<Type>(arg: Type): Type {
 	return arg;
 }
+
+```ad-note 
+title: Nota.
+
+Embora o uso de any seja certamente genérico, pois fará com que a função aceite todo e qualquer tipo para o tipo de arg, na verdade estamos perdendo as informações sobre qual era esse tipo quando a função retorna
+```
+
+
+
+## Type
+
+<font color="red">Type</font> nos permite abstratir um ou mais tipos para usar em um variaveis.
+
+
+```typescript
+
+type IdType = string | number | undefined
+let userId: idType 
+let adminId: idType
+
+adminId = 10; #aceita string, number ou undefenid 
+```
+
+
+
 ```
 
 
