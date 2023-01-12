@@ -78,3 +78,34 @@ function showMessages(message: string) {
 
 console.log(showMessages("Oi, João"))
 ```
+
+## Union
+
+-> Um tipo de união descreve um valor que pode ser um dos vários tipos. Usamos a barra vertical (|) para separar cada tipo, então numere | seqüência de caracteres | boolean é o tipo de valor que pode ser um número, uma string ou um booleano.
+
+```typescript
+function padLeft(value: string, padding: string | boolean) {
+// ...
+}
+
+let indentedString = padLeft("Hello world", true);
+```
+
+## Generics
+
+Sem os genéricos, teríamos que dar um tipo específico à função de identidade:
+```typescript
+function identity(arg: number): number {
+	return arg;
+}
+```
+
+Em vez disso, precisamos de uma forma de capturar o tipo do argumento de forma que também possamos usá-lo para denotar o que está sendo retornado. Aqui, usaremos uma variável de tipo, um tipo especial de variável que funciona com tipos em vez de valores.
+
+```typescript
+function identity<Type>(arg: Type): Type {
+	return arg;
+}
+```
+
+
