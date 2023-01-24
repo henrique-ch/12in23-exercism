@@ -128,9 +128,41 @@ let adminId: idType
 
 adminId = 10; #aceita string, number ou undefenid 
 ```
+# Type Assertions 
 
+
+Quando não se tem um type definido, mas voce espera algo em especifico, podemos usar o assertions para informar ao nosso objeto como ele será:
+
+```typescript
+type UserResponse = {
+	id: number, 
+	name: string, 
+	avatar: string 
+}
+
+let userResponse = {} as UserResponse; 
+```
+
+
+# Type x Interface 
+
+Ambas servem para criar tipagens, ou seja tem a mesma proposta.
+
+Porém "interface" é usado para declarar uma estrutura de dados. E "type" pode ser usado para declarar tipos de dados mais avançados, como tipos de função e tipos de união, enquanto "interface" é usado principalmente para declarar objetos e classes
+
+```typescript 
+type TUser = {
+	id: number, 
+	name: string;
+}
+
+interface IUser {
+	id: number, 
+	name: string;
+}
 
 
 ```
+
 
 
