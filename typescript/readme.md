@@ -1,4 +1,3 @@
-
 ## Intro
 
 Criado pela Microsoft com o objetivo de trazer um superset de tipagem para o javascript
